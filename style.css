@@ -548,3 +548,103 @@ hr{
     position: absolute;
     left: 1400px;
 }
+#fbody {
+    background: linear-gradient(135deg, #0f20277d, #203a437e, #2c536482);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.container {
+    background: #3A62D7;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgb(18, 80, 151),0 0 20px rgb(18, 80, 151),0 0 40px rgb(18, 80, 151),0 0 60px rgb(18, 80, 151);
+    text-align: center;
+    width: 350px;
+    height: 400px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.container:hover {
+    transform: scale(1.05);
+}
+.container h1{
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    font-size: 35 px;
+    font-family:"Black Ops One", system-ui;
+    letter-spacing: 2px;  
+    font-weight: 100;  
+    transform: scale(1.12,1.15)
+}
+.container h2 {
+    position: relative;
+    top: 20px;
+    font-size: 25px;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    font-family:"Black Ops One", system-ui;
+    letter-spacing: 2px;  
+    font-weight: 100;  
+    transform: scale(1.1,1.05)
+}
+.input-field {
+    margin-bottom: 40px;
+    position: relative;
+}
+.input-field input {
+    width: calc(100% - 70px);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+    box-shadow: 0 0 5px #3a61d784;
+    font-size: 1em;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s;
+}
+.input-field input:focus {
+    box-shadow: 0 0 10px #28272789;
+    transform: scale(1.05 );
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.buttons button {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #ffaa00, #ff8800);
+    color: #000;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+.buttons button:hover {
+    background: linear-gradient(135deg, #ff8800, #ffaa00);
+    transform: scale(1.1);
+}
+.forgot-password {
+    position: absolute;
+    left: 125px;
+    bottom: 70px;
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.forgot-password:hover {
+    color: #ff9900;
+}
+.verification-message {
+    margin-top: 55px;
+    color: #ffcc00;
+}
