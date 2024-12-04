@@ -624,6 +624,7 @@ hr{
     padding: 15px 25px;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
     background: linear-gradient(135deg, #ffaa00, #ff8800);
     color: #000;
     cursor: pointer;
@@ -634,9 +635,8 @@ hr{
     transform: scale(1.1);
 }
 .forgot-password {
-    position: absolute;
-    left: 125px;
-    bottom: 70px;
+    position: relative;
+    bottom: 80px;
     color: #ffcc00;
     text-decoration: none;
     font-weight: bold;
@@ -645,8 +645,8 @@ hr{
 .forgot-password:hover {
     color: #ff9900;
 }
-.verification-message {
-    margin-top: 55px;
+.verification-message{
+    margin-top: 105px;
     color: #ffcc00;
 }
 /*about us page*/
