@@ -781,9 +781,6 @@ justify-content: center;
 #bg_shopnow{
     background: linear-gradient(135deg, #0f20277d, #203a437e, #2c536482);
 }
-.product1:hover {
-    transform: scale(1.05);
-}
 .product1{
     position:absolute;
     width:300px;
