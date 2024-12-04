@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
 </head>
 <body id="fbody">
     <header>
@@ -31,26 +32,11 @@
                 <input type="password" id="password" placeholder="Password" required>
             </div>
             <div class="buttons">
-                <button type="button" onclick="validateForm()">Login</button>
+                <button type="button" onclick="validateForm2()">Login</button>
             </div>
             <a href="#" class="forgot-password">Forgot Password?</a>
             <div class="verification-message" id="verificationMessage"></div>
         </form>
     </div>
-    <script>
-        function validateForm() {
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            const verificationMessage = document.getElementById('verificationMessage');
-            
-            if (username === '' || password === '') {
-                verificationMessage.textContent = 'Please fill out all fields!!!';
-                return;
-            }
-            
-            verificationMessage.textContent = 'All details verified. You may proceed!';
-        }
-    </script>
 </body>
 </html>
-
