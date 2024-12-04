@@ -1,3 +1,4 @@
+
 html{
     background-color: #111111;
     background-image: linear-gradient(
@@ -1150,7 +1151,7 @@ justify-content: center;
     position: relative;
 }
 .inputfield input {
-    width: calc(100% - 20px);
+    width: calc(100% - 60px);
     padding: 15px;
     border: none;
     border-radius: 5px;
@@ -1160,6 +1161,10 @@ justify-content: center;
     font-size: 1em;
     transition: box-shadow 0.3s ease-in-out, transform 0.3s;
 }
+::placeholder {
+    color: rgb(168, 182, 194);
+    opacity: 1; 
+  }
 .inputfield input:focus {
     box-shadow: 0 0 10px #3a61d784;/* White focus */
     transform: scale(1.05);
@@ -1198,4 +1203,12 @@ justify-content: center;
 .verification-message {
     margin-top: 20px;
     color: #fff;
+}
+#checkout{
+    background-color: #4e9ef4;
+    border-radius: 4px;
+    width: 80px;
+    height: 25px;
+    font-family: cursive;
+    font-weight:300;
 }
