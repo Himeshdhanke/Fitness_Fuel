@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Fitness Fuel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body id="signbody">
+    <header>
+        <a href="index.html"><button class="button1">HOME</button></a>
+        <a href="shop_now.html"><button class="button2">SHOP</button></a>
+        <a href="about_us.html"><button class="button3">ABOUT</button></a>
+        <a href="login.html"><button class="button4">LOGIN</button></a>
+        <a href="sign_up.html"><button class="button5">SIGN UP</button></a>
+        <img id="logo" src="web-images\2.png">
+        <img id="name" src="web-images\NAME.png">
+    </header>
+    <div class="container2">
+        <h1>Fitness Fuel</h1>
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <div class="inputfield">
+                <input type="text" id="name1" placeholder="Name" required>
+            </div>
+            <div class="inputfield">
+                <input type="text" id="age" placeholder="Age" required>
+            </div>
+            <div class="inputfield">
+                <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="inputfield">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="inputfield">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <div class="buttons">
+                <button type="button" onclick="validateForm()">Sign Up</button>
+            </div>
+            <div class="additional-links">
+                <a href="#" class="login-link">Already have an account? Login</a>
+            </div>
+            <div class="verification-message" id="verificationMessage"></div>
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name1').value;
+            const age = document.getElementById('age').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const verificationMessage = document.getElementById('verificationMessage');
+            
+            const nameRegex = /^[A-Za-z]+$/;
+            const ageRegex = /^[1-9][0-9]?$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // At least 8 characters, one letter and one number
+
+            if (name === '' || age === '' || email === '' || password === '' || confirmPassword === '') {
+                verificationMessage.textContent = 'Please fill out all fields.';
+                return;
+            }
+            if (!nameRegex.test(name)) {
+                verificationMessage.textContent = 'Name should be in alphabets only.';
+                return;
+            }
+            if (!ageRegex.test(age)) {
+                verificationMessage.textContent = 'Age should be a positive two-digit number.';
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                verificationMessage.textContent = 'Please enter a valid email address.';
+                return;
+            }
+            if (!passwordRegex.test(password)) {
+                verificationMessage.textContent = 'Password should be at least 8 characters long and contain at least one letter and one number.';
+                return;
+            }
+            if (password !== confirmPassword) {
+                verificationMessage.textContent = 'Passwords do not match.';
+                return;
+            }
+            
+            verificationMessage.textContent = 'All details verified. You may proceed!';
+        }
+    </script>
+</body>
+</html>
